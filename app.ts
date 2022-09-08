@@ -1,7 +1,10 @@
+type Combinable = number | string;
+type ConversionType = "as-number" | "as-string";
+
 function combine(
-  input1: number | string,
-  input2: number | string,
-  resultConversion: "as-number" | "as-string"
+  input1: Combinable,
+  input2: Combinable,
+  resultConversion: ConversionType
 ) {
   let result;
   if (typeof input1 === "number" && typeof input2 === "number") {
