@@ -1,13 +1,14 @@
-const person: {
-  name: string;
-  age: number;
-  hobbies: string[];
-  role: [number, string];
-} = {
+enum Role {
+  admin,
+  user,
+  owner,
+}
+
+const person = {
   name: "Tolulope",
   age: 21,
   hobbies: ["running", "cooking"],
-  role: [2, "author"],
+  role: Role.user,
 };
 
 let favActivities: string[];
@@ -17,4 +18,8 @@ console.log(person.name);
 
 for (const hobby of person.hobbies) {
   console.log(hobby);
+}
+
+if (person.role === Role.user) {
+  console.log("is user");
 }
